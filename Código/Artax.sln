@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0AF7C9AE-CA7D-80AA-99A7-FC2DDE228380}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{E3BCCED6-C545-016B-3CB9-6CE3C90EF8E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{95975464-7A7C-5A49-7690-ADF78FF29462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{8376FA58-55CA-435E-1B33-9E83D92D49BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{0AF7C9AE-CA7D-80AA-99A7-FC2DDE228380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AF7C9AE-CA7D-80AA-99A7-FC2DDE228380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AF7C9AE-CA7D-80AA-99A7-FC2DDE228380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3BCCED6-C545-016B-3CB9-6CE3C90EF8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3BCCED6-C545-016B-3CB9-6CE3C90EF8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3BCCED6-C545-016B-3CB9-6CE3C90EF8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3BCCED6-C545-016B-3CB9-6CE3C90EF8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95975464-7A7C-5A49-7690-ADF78FF29462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95975464-7A7C-5A49-7690-ADF78FF29462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95975464-7A7C-5A49-7690-ADF78FF29462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95975464-7A7C-5A49-7690-ADF78FF29462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8376FA58-55CA-435E-1B33-9E83D92D49BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8376FA58-55CA-435E-1B33-9E83D92D49BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8376FA58-55CA-435E-1B33-9E83D92D49BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8376FA58-55CA-435E-1B33-9E83D92D49BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
