@@ -1,0 +1,604 @@
+fileFormatVersion: 2
+guid: ff5bb413e42ac724a81f8bc40c89c01b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "fondoMonta\xF1asNubes_0"
+    21300002: "fondoMonta\xF1asNubes_1"
+    21300004: "fondoMonta\xF1asNubes_2"
+    21300006: "fondoMonta\xF1asNubes_3"
+    21300008: "fondoMonta\xF1asNubes_4"
+    21300010: "fondoMonta\xF1asNubes_5"
+    21300012: "fondoMonta\xF1asNubes_6"
+    21300014: "fondoMonta\xF1asNubes_7"
+    21300016: "fondoMonta\xF1asNubes_8"
+    21300018: "fondoMonta\xF1asNubes_9"
+    21300020: "fondoMonta\xF1asNubes_10"
+    21300022: "fondoMonta\xF1asNubes_11"
+    21300024: "fondoMonta\xF1asNubes_12"
+    21300026: "fondoMonta\xF1asNubes_13"
+    21300028: "fondoMonta\xF1asNubes_14"
+    21300030: "fondoMonta\xF1asNubes_15"
+    21300032: "fondoMonta\xF1asNubes_16"
+    21300034: "fondoMonta\xF1asNubes_17"
+    21300036: "fondoMonta\xF1asNubes_18"
+    21300038: "fondoMonta\xF1asNubes_19"
+    21300040: "fondoMonta\xF1asNubes_20"
+    21300042: "fondoMonta\xF1asNubes_21"
+    21300044: "fondoMonta\xF1asNubes_22"
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_0"
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 3749
+        width: 783
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4badaab6ca1a54b943a790864b0fd0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_1"
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 3749
+        width: 780
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d4ca5bbd9ea654794a081b9962b961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_2"
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 3749
+        width: 780
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b938e2a64c0bc23468dd798b992ddf53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_3"
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 3740
+        width: 957
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf710b46049c1046b46919ed75847e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_4"
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2862
+        width: 781
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21935af0a4558df49a3ea3a59f5ac15f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_5"
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 2862
+        width: 782
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ecaa56a31273041a15e94f1a7bf1b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_6"
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 2862
+        width: 781
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbeedeb4f8ff483499b12addeeba8090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_7"
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 2862
+        width: 780
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35db42ae8037221498cf7d7d42fdacba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_8"
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1977
+        width: 783
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24579900bdc02d4fb1a72e353355313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_9"
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 1977
+        width: 780
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be8eca14b227f540a4318ffb3bfd464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_10"
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 1979
+        width: 781
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51786688af8b32545866e55233444d4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_11"
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 1971
+        width: 957
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e62f08cfd6dafa42820be9455db3833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_12"
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1090
+        width: 781
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc0b5b8c971e824a9dca9aff576c91c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_13"
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1090
+        width: 782
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c80a51e9a1bf5458c2484c347e92d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_14"
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 1091
+        width: 781
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212ec0781f0e69b4fb6fedd069490eb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_15"
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 1091
+        width: 780
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c3652146dad88499a0eb3790201fad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_16"
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 423
+        width: 650
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34028b213bb93154786474140e94a753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_17"
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 458
+        width: 1095
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2632928821aa06d4abcfcbfc3755a80d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_18"
+      rect:
+        serializedVersion: 2
+        x: 3053
+        y: 403
+        width: 1341
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1605516520607bf46b9245725f2fd841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_19"
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 37
+        width: 1097
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bee0158ed8bf84792edb4e8a46f0ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_20"
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 93
+        width: 540
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26636f15fd7828547a75ac626c8b3796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_21"
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 79
+        width: 535
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d77064ff00f0454484671d4f2f8ddbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fondoMonta\xF1asNubes_22"
+      rect:
+        serializedVersion: 2
+        x: 3277
+        y: 65
+        width: 1168
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d5abb148bda1645b8fcad806fc65fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: defe6c33b4abb1a4197635739f1bd28f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

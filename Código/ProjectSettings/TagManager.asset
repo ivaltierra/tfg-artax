@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - arma
+  - enemigo
+  - armaEnemigo
+  - basija
+  - checkpoint
+  - final
+  - finalJuego
   layers:
   - Default
   - TransparentFX
@@ -13,9 +20,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
+  - lyr_Enemigo
+  - lyr_Basija
   - 
   - 
   - 

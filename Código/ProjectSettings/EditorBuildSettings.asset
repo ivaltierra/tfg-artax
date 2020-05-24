@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pantalla1.unity
     guid: 351de2266c28fec419ba80fa89adcdd1
+  - enabled: 1
+    path: Assets/Scenes/Pantalla2.unity
+    guid: 18d56e56354ffb74b9b15691360e2f8d
+  - enabled: 1
+    path: Assets/Scenes/FinPartida.unity
+    guid: 5a109db47f9e4ec479ba80310f9f92e1
+  - enabled: 1
+    path: Assets/Scenes/FinJuego.unity
+    guid: 0ad2de69df1f1654f872d2a4b6b9d873
   m_configObjects: {}
