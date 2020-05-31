@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkPointSeleccionado: {fileID: 4907149484608125733, guid: 580048ec2680ad6499dbb56a1a6901e2,
     type: 3}
+  audio: {fileID: 0}
 --- !u!61 &5389166424659163951
 BoxCollider2D:
   m_ObjectHideFlags: 0

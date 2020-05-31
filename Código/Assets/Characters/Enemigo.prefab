@@ -345,7 +345,7 @@ PrefabInstance:
     - target: {fileID: 5873289314703629936, guid: 725c56e18c26cc04ebc988f8adeb299b,
         type: 3}
       propertyPath: esperaAtaque
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5873289314703629936, guid: 725c56e18c26cc04ebc988f8adeb299b,
         type: 3}

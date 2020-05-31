@@ -25,6 +25,7 @@ public class Enemigo : MonoBehaviour
     [HideInInspector] public bool enRango;
     public GameObject zonaCombate;
     public GameObject areaTrigger;
+    private bool atacando = false;
     //arma
     public GameObject cajaAtaque;
     private Enemigo_Arma enemigoArma;
@@ -39,6 +40,12 @@ public class Enemigo : MonoBehaviour
     public Transform limiteDer;
 
     public Transform finalJuego;
+
+    //sonido
+    [Header("Audios")]
+    public AudioSource audioDanio;
+    public AudioSource audioAtacar;
+    public AudioSource audioMorir;
 
 
     // Start is called before the first frame update
@@ -135,18 +142,20 @@ public class Enemigo : MonoBehaviour
     }
 
     public void recibirDanio(int danio) {
+        if (!atacando) { 
         vidaActual -= danio;
-        
+        audioDanio.Play();
         anim.SetTrigger("Hurt");
 
         if (vidaActual <= 0) {
             muere();
         }
+        }
     }
 
     void muere() {
 
-        Debug.Log("Enemigo muerto");
+        audioMorir.Play();
         //Animación de muerte
         esMuerto = true;
         anim.SetBool("esMuerto", true);
@@ -202,12 +211,15 @@ public class Enemigo : MonoBehaviour
 
     public void ataqueInicio()
     {
+        atacando = true;
+        audioAtacar.Play();
         enemigoArma.ataque();
     }
 
     public void ataqueFin()
     {
         enemigoArma.ataqueFin();
+        atacando = false;
     }
 
     public void mostrarFinalJuego() {

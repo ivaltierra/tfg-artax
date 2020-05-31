@@ -10,12 +10,20 @@ public class ArtaxControler : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    //Movimiento
+    private float moveSpeed;
+    private float dirX;
+    private bool facingRight = true;
+    private Vector3 localScale;
+
+    [Header("Joistick")]
     public Joystick joistick;
 
     //armas
     private Transform armaActual;
     private Transform filoActual;
     private float rangoArmaActual;
+    [Header("Armas")]
     public Transform arma1;
     public Transform arma1_Filo;
     public float rangoArma1;
@@ -31,34 +39,42 @@ public class ArtaxControler : MonoBehaviour
     private GameObject particulasArmaActual;
     public Transform punteroParticulas;
 
-
-    private float moveSpeed;
-    private float dirX;
-    private bool facingRight = true;
-    private Vector3 localScale;
-
-
     //ataque
     private bool esAtaque = false;
+
+    //Layers
+    [Header("Layers")]
     public LayerMask lyrEnemigos;
     public LayerMask lyrBasijas;
 
     //vida
+    [Header("Vida")]
     public int nVidas;
     public int vida;
     public TMPro.TextMeshProUGUI textoNvidas;
     public Transform corazones;
-
-    //Joyas
-    public int nJoyas;
-    public TMPro.TextMeshProUGUI textoNjoyas;
 
     //muerte
     public UnityEngine.UI.Image fondoNegro;
     float ValorAlfaDeseado;
     bool esMuerte;
 
+    //Joyas
+    [Header("Joyas")]
+    public int nJoyas;
+    public TMPro.TextMeshProUGUI textoNjoyas;
+
+    //sonido
+    [Header("Audios")]
+    public AudioSource audioDanio;
+    public AudioSource audioCorrer;
+    public AudioSource audioSaltar;
+    public AudioSource audioAtacar;
+    public AudioSource audioMorir;
+    public AudioSource audioObjeto;
+
     //final
+    [Header("Texto Final")]
     public GameObject txtFinal;
     float inicioFadeOut = float.MaxValue;
     bool esFinal = false;
@@ -94,6 +110,7 @@ public class ArtaxControler : MonoBehaviour
         }
 
         //estadoJuego
+        Debug.Log("PArtida guardada ---> " + EstadoJuego.estadoJuego.partidaGuardarda);
         if(EstadoJuego.estadoJuego.partidaGuardarda) cargarEstadoJuego();
     
     }
@@ -108,6 +125,7 @@ public class ArtaxControler : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Atack"))
         {
             particulasArmaActual.gameObject.SetActive(true);
+            audioAtacar.Play();
 
             ataque();
             
@@ -138,14 +156,23 @@ public class ArtaxControler : MonoBehaviour
 
         //correr
         if (Mathf.Abs(dirX) > 0 && rb.velocity.y == 0)
+        {
             anim.SetBool("esCorrer", true);
+            audioCorrer.Play();
+        }
         else
+        {
+            audioCorrer.Stop();
             anim.SetBool("esCorrer", false);
+        }
 
 
         //salto
         if (CrossPlatformInputManager.GetButtonDown("Jump") && rb.velocity.y == 0)
+        {
             rb.AddForce(Vector2.up * 1000f);
+            audioSaltar.Play();
+        }
 
         if (rb.velocity.y == 0)
         {
@@ -154,7 +181,9 @@ public class ArtaxControler : MonoBehaviour
         }
 
         if (rb.velocity.y > 0)
+        {
             anim.SetBool("esSalto", true);
+        }
 
         if (rb.velocity.y < 0) {
             anim.SetBool("esSalto", false);
@@ -175,7 +204,7 @@ public class ArtaxControler : MonoBehaviour
         //reiniciar escena cuando se complete el fadeOut
         if (valorAlfa > 0.9f && ValorAlfaDeseado == 1)
         {
-            if (escenaAcargar >= 5)//hasta la iltima parntalla
+            if (escenaAcargar > 5)//hasta la iltima parntalla
             {
                 //fin de partida o Victoria
                 EstadoJuego.estadoJuego.inicializar();
@@ -226,6 +255,26 @@ public class ArtaxControler : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("plataformaMovil"))
+        {
+            transform.parent = collision.transform;
+            //anim.SetBool("esCorrer", true);
+            anim.SetBool("esCaida", false);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("plataformaMovil"))
+        {
+            transform.parent = null;
+            //anim.SetBool("esCorrer", true);
+            anim.SetBool("esCaida", false);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D colision)
     {
         //Gestión cambio de arma
@@ -261,6 +310,7 @@ public class ArtaxControler : MonoBehaviour
             esFinal = true;
             txtFinal.SetActive(true);
             anim.SetBool("esCorrer", false);
+            audioCorrer.Stop();
             anim.SetBool("esSalto", false);
             anim.SetBool("esCaida", false);
             inicioFadeOut = Time.time + 3f;
@@ -273,6 +323,7 @@ public class ArtaxControler : MonoBehaviour
             esFinal = true;
             txtFinal.SetActive(true);
             anim.SetBool("esCorrer", false);
+            audioCorrer.Stop();
             anim.SetBool("esSalto", false);
             anim.SetBool("esCaida", false);
             inicioFadeOut = Time.time + 3f;
@@ -294,27 +345,30 @@ public class ArtaxControler : MonoBehaviour
         foreach (Collider2D enemigo in hit) {
             Debug.Log("we hit enemigo -> " + enemigo.name + " ---- " + enemigo.GetType() + " ---- " + enemigo.gameObject.tag + " ---- " + DanioArmaActual);
             if (enemigo.GetType().ToString().Equals("UnityEngine.BoxCollider2D"))
+            {
                 if (enemigo.GetComponent<Enemigo>() != null)
                     enemigo.GetComponent<Enemigo>().recibirDanio(DanioArmaActual);
+                if (enemigo.GetComponent<Jar>() != null)
+                    enemigo.GetComponent<Jar>().recibirDanio(DanioArmaActual);
+            }
+                
         }
 
 
-        Debug.Log("paso");
         //detectar basijas
         Collider2D[] hitBasijas = Physics2D.OverlapCircleAll(filoActual.position, rangoArmaActual, lyrBasijas);
 
-        //dañar enemigos golpeados
+        //dañar basijas
         foreach (Collider2D basija in hitBasijas)
         {
-            Debug.Log("we hit basija -> " + basija.name + " ---- " + basija.GetType() + " ---- " + basija.gameObject.tag + " ---- " + DanioArmaActual);
             if (basija.GetType().ToString().Equals("UnityEngine.BoxCollider2D"))
-                Debug.Log("Basija");
                 basija.GetComponent<Basija>().destruir();
         }
     }
 
     public void recibirAtaque(int danio)
     {
+        audioDanio.Play();
         vida -= danio;
         if (vida <= 0) muere();
     }
@@ -325,15 +379,19 @@ public class ArtaxControler : MonoBehaviour
     }
 
     public void muere() {
-        Debug.Log("muerto Artax");
         escenaAcargar = escenaActual();
         nVidas -= 1;
         esMuerte = true;
+        audioMorir.Play();
         anim.SetBool("esMuerte", true);
+
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        GetComponent<Rigidbody2D>().drag = 50;
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<CapsuleCollider2D>().enabled = false;
 
         if (nVidas <= 0)
         {
-            Debug.Log("A Game OVER");
             escenaAcargar = 6;//fin de partida
             inicioFadeOut = Time.time + 3f;
         } 
@@ -360,6 +418,8 @@ public class ArtaxControler : MonoBehaviour
     }
 
     public void sumaJoya(int valor, GameObject joya) {
+        
+        audioObjeto.Play();
 
         //añadoVariable a nJoyas
         EstadoJuego.estadoJuego.nJoyas += valor;
@@ -385,6 +445,7 @@ public class ArtaxControler : MonoBehaviour
     }
 
     public void sumaCorazon(GameObject corazon) {
+        audioObjeto.Play();
         if (vida < 3)
             vida += 1;
         Destroy(corazon);

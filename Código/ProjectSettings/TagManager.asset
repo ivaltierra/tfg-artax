@@ -11,6 +11,8 @@ TagManager:
   - checkpoint
   - final
   - finalJuego
+  - cuesta
+  - plataformaMovil
   layers:
   - Default
   - TransparentFX
