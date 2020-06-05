@@ -60,10 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\barraVida.cs" />
-    <Compile Include="Assets\bola.cs" />
-    <Compile Include="Assets\ComenzarAccion.cs" />
-    <Compile Include="Assets\Jar_ZonaCombate.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -71,12 +67,14 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\PlataformaMovil.cs" />
     <Compile Include="Assets\Scripts\ArtaxControler.cs" />
+    <Compile Include="Assets\Scripts\barraVida.cs" />
     <Compile Include="Assets\Scripts\Basija.cs" />
     <Compile Include="Assets\Scripts\BasijaRota.cs" />
+    <Compile Include="Assets\Scripts\bola.cs" />
     <Compile Include="Assets\Scripts\cameraFollow.cs" />
     <Compile Include="Assets\Scripts\checkpoint.cs" />
+    <Compile Include="Assets\Scripts\ComenzarAccion.cs" />
     <Compile Include="Assets\Scripts\ConfMenu.cs" />
     <Compile Include="Assets\Scripts\Corazon.cs" />
     <Compile Include="Assets\Scripts\DatosAudio.cs" />
@@ -89,10 +87,12 @@
     <Compile Include="Assets\Scripts\EstadoJuego.cs" />
     <Compile Include="Assets\Scripts\Jar.cs" />
     <Compile Include="Assets\Scripts\Jar_TrigerArea.cs" />
+    <Compile Include="Assets\Scripts\Jar_ZonaCombate.cs" />
     <Compile Include="Assets\Scripts\Joya.cs" />
     <Compile Include="Assets\Scripts\LvlMgr.cs" />
     <Compile Include="Assets\Scripts\Pausar.cs" />
-    <Compile Include="Assets\TriggerCierraPantalla.cs" />
+    <Compile Include="Assets\Scripts\PlataformaMovil.cs" />
+    <Compile Include="Assets\Scripts\TriggerCierraPantalla.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BasijaRota : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         gameObject.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(new Vector2(-200, 200));

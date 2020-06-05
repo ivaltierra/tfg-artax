@@ -6,7 +6,8 @@ public class Enemigo_TriggerArea : MonoBehaviour
 {
     private Enemigo enemigo;
 
-    private void Awake(){
+    private void Awake()
+    {
         enemigo = GetComponentInParent<Enemigo>();
     }
 

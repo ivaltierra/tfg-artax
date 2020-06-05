@@ -14,12 +14,6 @@ public class Basija : MonoBehaviour
     public GameObject corazon;
     public int tipo;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public void destruir() {
 
         Instantiate(basijaRota, transform.position, transform.rotation);

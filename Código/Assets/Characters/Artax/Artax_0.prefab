@@ -1313,6 +1313,7 @@ MonoBehaviour:
   audioSaltar: {fileID: 82634699921641364}
   audioAtacar: {fileID: 82849717727159560}
   audioMorir: {fileID: 6394608437512460866}
+  audioObjeto: {fileID: 0}
   txtFinal: {fileID: 0}
 --- !u!251 &663136754755751440
 PlatformEffector2D:

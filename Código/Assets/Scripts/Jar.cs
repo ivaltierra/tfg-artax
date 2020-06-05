@@ -9,8 +9,6 @@ public class Jar : MonoBehaviour
     public float velocidad = 7;
     int direccion = 1;
     private Rigidbody2D rb;
-  //  private float limiteIzq;
-  //  private float limiteDer;
     private Vector3 escalaPj;
 
     //vida
@@ -57,36 +55,27 @@ public class Jar : MonoBehaviour
     public AudioSource audioAtacar;
     public AudioSource audioMorir;
 
-    // Start is called before the first frame update
     void Start()
         {
             vidaActual = vida;
             barraVida.asignaValorMaximo(vida);
-            //        rb = GetComponent<Rigidbody2D>();
-            //       limiteIzq = transform.position.x - GetComponent<CircleCollider2D>().radius;
-            //        limiteDer = transform.position.x + GetComponent<CircleCollider2D>().radius;
-            //
             escalaPj = transform.localScale;
         }
 
-    // Update is called once per frame
     void Update()
     {
-        //movimiento
-        //        rb.velocity = new Vector2(velocidad * direccion, rb.velocity.y);
-        //        if (transform.position.x < limiteIzq) direccion = 1;
-        //        if (transform.position.x > limiteDer) direccion = -1;
-        //        transform.localScale = new Vector3(escalaPj.x * direccion, escalaPj.y, escalaPj.z);
-
-        if (!modoAtaque) {
+        if (!modoAtaque)
+        {
             seMueveHacia();
         }
 
-        if (!entreLimites() && !enRango && !anim.GetCurrentAnimatorStateInfo(0).IsName("Orco1_Atack")) {
+        if (!entreLimites() && !enRango && !anim.GetCurrentAnimatorStateInfo(0).IsName("Orco1_Atack"))
+        {
             seleccionarTarjet();
         }
 
-        if (enRango) {
+        if (enRango)
+        {
             esLimiteDer = false;
             logicaEnemigo();
         }
@@ -101,10 +90,12 @@ public class Jar : MonoBehaviour
         {
             pararAtaque();
         }
-        else if (distanciaAtaque >= distanciaEntrePj && enReposo == false) {
+        else if (distanciaAtaque >= distanciaEntrePj && enReposo == false)
+        {
             atacar();
         }
-        if (enReposo) {
+        if (enReposo)
+        {
             pararEnReposo();
             anim.SetBool("esAtaque", false);
         }
@@ -112,7 +103,6 @@ public class Jar : MonoBehaviour
 
     void logicaEnemigo2()
     {
-        Debug.Log("Entro en logica enemigo 2 --> " + enReposoAtaque2);
         if (enReposoAtaque2 == false)
         {
             atacar2();
@@ -120,7 +110,6 @@ public class Jar : MonoBehaviour
         if (enReposoAtaque2)
         {
             pararEnReposo2();
-            
         }
     }
 
@@ -135,21 +124,25 @@ public class Jar : MonoBehaviour
 
     }
 
-    void seMueveHacia() {
-        if (esLimiteDer) { 
+    void seMueveHacia()
+    {
+        if (esLimiteDer)
+        { 
             anim.SetBool("esAndando", false);
             logicaEnemigo2();
-        }else {
+        }else
+        {
             anim.SetBool("esAndando", true);
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Orco1_Atack")) {
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Orco1_Atack"))
+            {
                 Vector2 posicionTarjet = new Vector2(tarjet.position.x, transform.position.y);
                 transform.position = Vector2.MoveTowards(transform.position, posicionTarjet, velocidad * Time.deltaTime);
             }
         }
-
     }
 
-    void atacar() {
+    void atacar()
+    {
         esperaAtaque = intTimer; //resetea el tiempo de espera cuando el personaje entra en el rango
         modoAtaque = true;
 
@@ -165,17 +158,20 @@ public class Jar : MonoBehaviour
 
     }
 
-    void pararAtaque() {
+    void pararAtaque()
+    {
         enReposo = false;
         modoAtaque = false;
         anim.SetBool("esAtaque", false);
 
     }
 
-    void pararEnReposo() {
+    void pararEnReposo()
+    {
         esperaAtaque -= Time.deltaTime;
 
-        if (esperaAtaque <= 0 && enReposo && modoAtaque) {
+        if (esperaAtaque <= 0 && enReposo && modoAtaque)
+        {
             enReposo = false;
             esperaAtaque = intTimer;
         }
@@ -204,8 +200,10 @@ public class Jar : MonoBehaviour
         }
     }
 
-    public void recibirDanio(int danio) {
-        if (!atacando && !invencible) { 
+    public void recibirDanio(int danio)
+    {
+        if (!atacando && !invencible)
+        { 
             vidaActual -= danio;
             barraVida.asignaVida(vidaActual);
             audioDanio.Play();
@@ -215,14 +213,16 @@ public class Jar : MonoBehaviour
             esperarDanio = intTimer + 2f;
             invencibilidad.SetActive(true);
 
-            if (vidaActual <= 0) {
+            if (vidaActual <= 0)
+            {
                 invencibilidad.SetActive(false);
                 muere();
             }
         }
     }
 
-    void muere() {
+    void muere()
+    {
 
         audioMorir.Play();
         //Animación de muerte
@@ -233,52 +233,45 @@ public class Jar : MonoBehaviour
         GetComponent<Rigidbody2D>().gravityScale = 0;
         GetComponent<BoxCollider2D>().enabled = false;        
         this.enabled = false;
-        
     }
 
-    public void enemigodesaparece() {
-        Debug.Log("enemigo eliminado -> " + GetComponent<Rigidbody2D>().gameObject.transform.parent.name);
-        //Destroy(GetComponent<Rigidbody2D>().gameObject.transform.parent.gameObject);
+    public void enemigodesaparece()
+    {
         GetComponent<Rigidbody2D>().gameObject.transform.parent.gameObject.SetActive(false);
-
     }
 
-    public void TriggerEnReposo() {
+    public void TriggerEnReposo()
+    {
         enReposo = true;
     }
 
-    private bool entreLimites() {
+    private bool entreLimites()
+    {
         return transform.position.x > limiteIzq.transform.position.x && transform.position.x < limiteDer.position.x;
     }
 
-    public void seleccionarTarjet() {
+    public void seleccionarTarjet()
+    {
         float distanciaIzq = Vector2.Distance(transform.position, limiteIzq.position);
         float distanciaDer = Vector2.Distance(transform.position, limiteDer.position);
-        Debug.Log("Distancia ---> " + distanciaDer);
         if (distanciaDer < 6)
             esLimiteDer = true;
-        //if (distanciaIzq > distanciaDer) {
-            //tarjet = limiteIzq;
-       // }
-       // else {
-            tarjet = limiteDer;
-       //}
+
+        tarjet = limiteDer;
         girarPersonaje();
     }
 
     public void girarPersonaje(){
         if (esMuerto) return;
-        //Vector3 rotation = transform.eulerAngles;
         GameObject personaje = GameObject.FindGameObjectWithTag("Player");
-        if (transform.position.x > personaje.transform.position.x){
+        if (transform.position.x > personaje.transform.position.x)
+        {
             direccion = 1;
-           // rotation.y = 0;
-        }else{
+        }else
+        {
             direccion = -1;
-           // rotation.y = 180f;
         }
          transform.localScale = new Vector3(escalaPj.x * direccion, escalaPj.y, escalaPj.z);
-         //transform.eulerAngles = rotation;
     }
 
     public void ataqueInicio()
@@ -294,7 +287,8 @@ public class Jar : MonoBehaviour
         atacando = false;
     }
 
-    public void mostrarFinalJuego() {
+    public void mostrarFinalJuego()
+    {
         finalJuego.gameObject.SetActive(true);
     }
 }

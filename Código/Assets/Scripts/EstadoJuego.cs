@@ -29,13 +29,15 @@ public class EstadoJuego : MonoBehaviour
             estadoJuego = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if (estadoJuego != this) {
+        else if (estadoJuego != this)
+        {
             Destroy(gameObject);
         }
     }
 
     //Basijas Gestión
-    public class EstadoBasijas {
+    public class EstadoBasijas
+    {
         public bool activo;
     }
 
@@ -54,7 +56,6 @@ public class EstadoJuego : MonoBehaviour
 
     public void inicializar()
     {
-        Debug.Log("entro a Inicializar");
         partidaGuardarda = false;
         nVidas = 3;
         nJoyas = 0;

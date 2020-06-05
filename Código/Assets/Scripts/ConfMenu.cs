@@ -9,6 +9,5 @@ public class ConfMenu : MonoBehaviour{
 
     public void AsignarVolumen(float volumen) {
         audioMixer.SetFloat("VolumenMixer", volumen);
-
     }
 }

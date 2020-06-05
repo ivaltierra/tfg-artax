@@ -104,15 +104,14 @@ public class ArtaxControler : MonoBehaviour
 
         //vidas
         int i = 0;
-        foreach (RectTransform corazon in corazones) {
+        foreach (RectTransform corazon in corazones)
+        {
             i++;
             corazon.anchoredPosition = new Vector2(i*35, -73);
         }
 
         //estadoJuego
-        Debug.Log("PArtida guardada ---> " + EstadoJuego.estadoJuego.partidaGuardarda);
         if(EstadoJuego.estadoJuego.partidaGuardarda) cargarEstadoJuego();
-    
     }
 
     
@@ -151,7 +150,7 @@ public class ArtaxControler : MonoBehaviour
         {
             dirX = 0f;
         }
-        dirX = joistick.Horizontal * moveSpeed;//Input.GetAxisRaw("Horizontal") * moveSpeed;
+        dirX = joistick.Horizontal * moveSpeed;
 
 
         //correr
@@ -185,7 +184,8 @@ public class ArtaxControler : MonoBehaviour
             anim.SetBool("esSalto", true);
         }
 
-        if (rb.velocity.y < 0) {
+        if (rb.velocity.y < 0)
+        {
             anim.SetBool("esSalto", false);
             anim.SetBool("esCaida", true);
         }
@@ -260,7 +260,6 @@ public class ArtaxControler : MonoBehaviour
         if (collision.gameObject.CompareTag("plataformaMovil"))
         {
             transform.parent = collision.transform;
-            //anim.SetBool("esCorrer", true);
             anim.SetBool("esCaida", false);
         }
     }
@@ -270,7 +269,6 @@ public class ArtaxControler : MonoBehaviour
         if (collision.gameObject.CompareTag("plataformaMovil"))
         {
             transform.parent = null;
-            //anim.SetBool("esCorrer", true);
             anim.SetBool("esCaida", false);
         }
     }
@@ -301,7 +299,6 @@ public class ArtaxControler : MonoBehaviour
         {
             colision.gameObject.GetComponent<Animator>().SetBool("esSeleccion", true);
             EstadoJuego.estadoJuego.posicionPersonaje = colision.gameObject.transform.position;
-
         }
 
         if (colision.gameObject.CompareTag("final"))
@@ -329,12 +326,10 @@ public class ArtaxControler : MonoBehaviour
             inicioFadeOut = Time.time + 3f;
             escenaAcargar = 7;
         }
-
     }
 
     void ataque()
     {
-
         //animacián atacar
         anim.SetTrigger("esAtaque");
 
@@ -343,7 +338,6 @@ public class ArtaxControler : MonoBehaviour
 
         //dañar enemigos golpeados
         foreach (Collider2D enemigo in hit) {
-            Debug.Log("we hit enemigo -> " + enemigo.name + " ---- " + enemigo.GetType() + " ---- " + enemigo.gameObject.tag + " ---- " + DanioArmaActual);
             if (enemigo.GetType().ToString().Equals("UnityEngine.BoxCollider2D"))
             {
                 if (enemigo.GetComponent<Enemigo>() != null)
@@ -353,7 +347,6 @@ public class ArtaxControler : MonoBehaviour
             }
                 
         }
-
 
         //detectar basijas
         Collider2D[] hitBasijas = Physics2D.OverlapCircleAll(filoActual.position, rangoArmaActual, lyrBasijas);
@@ -373,12 +366,14 @@ public class ArtaxControler : MonoBehaviour
         if (vida <= 0) muere();
     }
 
-    public void finalizaAtaque() {
+    public void finalizaAtaque()
+    {
         esAtaque = false;
         StartCoroutine(esperarParticulasArma());
     }
 
-    public void muere() {
+    public void muere()
+    {
         escenaAcargar = escenaActual();
         nVidas -= 1;
         esMuerte = true;
@@ -396,7 +391,6 @@ public class ArtaxControler : MonoBehaviour
             inicioFadeOut = Time.time + 3f;
         } 
     }
-
 
     public void iniciarfadeInOut()
     {
@@ -527,7 +521,7 @@ public class ArtaxControler : MonoBehaviour
             }
         }
 
-        //Enemigod
+        //Enemigos
         Transform Enemigos = GameObject.Find("Enemigos").transform;
         i = 0;
         foreach (Transform enemigo in Enemigos)
@@ -543,11 +537,7 @@ public class ArtaxControler : MonoBehaviour
         {
             if (!EstadoJuego.estadoChecks[i].activo) {
                 checkPoint.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("esSeleccion", true);
-                //GameObject seleccionado = Instantiate(checkPoint.gameObject.transform.GetChild(0).GetComponent<checkpoint>().Seleccionado(), checkPoint.transform.parent.position, checkPoint.transform.rotation);
-                //seleccionado.transform.parent = GameObject.Find("CheckPoints").transform;
             }
-            //checkPoint.gameObject.SetActive(EstadoJuego.estadoChecks[i].activo);
-            //checkPoint.position = EstadoJuego.estadoChecks[i].posicionCheck;
             i++;
         }
 

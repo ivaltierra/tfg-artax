@@ -15,21 +15,14 @@ public class Pausar : MonoBehaviour
          
     void Start()
     {
-     //   canvas = GetComponent<Canvas>();
-    //    if(SceneManager.GetActiveScene().buildIndex!=1)
-     //       canvas.enabled = false;
          cargarEstado();
     }
 
     public void pausa()
     {
-        // Debug.Log("PASO");
         if (SceneManager.GetActiveScene().buildIndex != 1)
         {
-            
-            //canvas.enabled = !canvas.enabled;
             Time.timeScale = Time.timeScale == 0 ? 1 : 0;
-            Debug.Log("paso por pausa");
         }
 
         guardarEstado();
@@ -37,13 +30,11 @@ public class Pausar : MonoBehaviour
 
     public void menu()
     {
-        //guardarEstado();
-        //EstadoJuego.estadoJuego.inicializar();
-        Debug.Log("paso por menu");
         SceneManager.LoadScene(1);
     }
 
-    void cargarEstado() {
+    void cargarEstado()
+    {
         //para que cambie de valor y se lo asigne
         sliderMusica.value = 0;
         sliderMusica.value = -1;
@@ -63,8 +54,8 @@ public class Pausar : MonoBehaviour
         DatosAudio.efectos = sliderEfectos.value;
     }
 
-    public void setVolumenMusica(float volumen) {
-        Debug.Log("SET VOLUME");
+    public void setVolumenMusica(float volumen)
+    {
         mixer.SetFloat("musicaVolumen", volumen);
     }
 

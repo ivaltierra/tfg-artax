@@ -8,26 +8,33 @@ public class Enemigo_ZonaCombate : MonoBehaviour
     private bool enRango;  
     private Animator anim;
 
-    private void Awake(){
+    private void Awake()
+    {
         enemigo = GetComponentInParent<Enemigo>();
         anim = GetComponentInParent<Animator>();
     }
 
-    private void Update(){
-        if(enRango && !anim.GetCurrentAnimatorStateInfo(0).IsName("Orco1_Atack")) {
+    private void Update()
+    {
+        if(enRango && !anim.GetCurrentAnimatorStateInfo(0).IsName("Orco1_Atack"))
+        {
             enemigo.girarPersonaje();
         }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collider){
-        if(collider.gameObject.CompareTag("Player")){
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.CompareTag("Player"))
+        {
             enRango = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collider){
-        if(collider.gameObject.CompareTag("Player")){
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if(collider.gameObject.CompareTag("Player"))
+        {
             enRango = false;
             gameObject.SetActive(false);
             enemigo.areaTrigger.SetActive(true);
