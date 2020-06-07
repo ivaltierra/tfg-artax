@@ -48,7 +48,7 @@ public class Pausar : MonoBehaviour
        mixer.SetFloat("efectosVolumen", DatosAudio.efectos);
     }
 
-    void guardarEstado()
+    public void guardarEstado()
     {
         DatosAudio.musica = sliderMusica.value;
         DatosAudio.efectos = sliderEfectos.value;

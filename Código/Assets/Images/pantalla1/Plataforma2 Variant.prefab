@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 5259689524640853320, guid: 62a318920ed4bee47a4f37291bd9d8ae,
         type: 3}
       propertyPath: m_Name
-      value: Plataforma2
+      value: Plataforma2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6721767741045000500, guid: 62a318920ed4bee47a4f37291bd9d8ae,
         type: 3}

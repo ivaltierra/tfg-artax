@@ -173,17 +173,20 @@ public class ArtaxControler : MonoBehaviour
             audioSaltar.Play();
         }
 
+        //posado en el suelo
         if (rb.velocity.y == 0)
         {
             anim.SetBool("esSalto", false);
             anim.SetBool("esCaida", false);
         }
 
+        //salto ascendente
         if (rb.velocity.y > 0)
         {
             anim.SetBool("esSalto", true);
         }
 
+        //salto descendente
         if (rb.velocity.y < 0)
         {
             anim.SetBool("esSalto", false);
